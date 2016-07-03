@@ -1,0 +1,107 @@
+html {
+  height: 100%;
+}
+body {
+  background-color: #F1F1F1;
+  height: 100%;
+  margin: 0;
+  font-family: 'Arial', Sans-serif;
+}
+h1 {
+  font-size: 50px;
+  text-align: center;
+  background-color: #18212D;
+  color: white;
+  margin: 0 0 1em 0;
+  padding: 30px;
+  border-bottom: 1px solid silver;
+}
+img {
+  border-radius: 10px;
+  float: right;
+  max-width: 600px;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  float: left;
+  height: 90%;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+li {
+  flex-grow: 1;
+}
+.animateMe {
+  height: 100px;
+  width: 100px;
+  border-radius: 7px;
+  text-align: center;
+  line-height:100px;
+  color: white;
+  margin: 10px;
+}
+.elem1 {
+  background-color: red;
+}
+
+.elem2 {
+  background-color: #2B8DFF;
+}
+
+.elem3 {
+  background-color: brown;
+}
+
+.elem4 {
+  background-color: pink;
+}
+.wrapper {
+  height: 100%;
+  overflow: hidden;
+  width: 80%;
+  margin: 0 auto;
+}
+#uiView {
+  height: 80%;
+}
+/* Animations ====================== */
+@keyframes slideOutLeft {
+  to      { transform: translateX(100%); }
+}
+@keyframes slideInLeft {
+  from    { transform:translateX(-100%); }
+  to      { transform: translateX(0); }
+}
+@keyframes slideOutRight {
+  to      { transform: translateX(-100%); }
+}
+@keyframes slideInRight {
+  from    { transform:translateX(100%); }
+  to      { transform: translateX(0); }
+}
+
+
+[ui-view].ng-enter, [ui-view].ng-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.left [ui-view].ng-enter {
+  animation: slideInLeft 0.5s both ease-in;
+  z-index: 8888;
+}
+.left [ui-view].ng-leave {
+  animation: slideOutLeft 0.5s both ease-in;
+  z-index: 9999;
+}
+.right [ui-view].ng-enter {
+  animation: slideInRight 0.5s both ease-in;
+  z-index: 8888;
+}
+.right [ui-view].ng-leave {
+  animation: slideOutRight 0.5s both ease-in;
+  z-index: 9999;
+}
