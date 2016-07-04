@@ -1,9 +1,9 @@
-<h1>{{ slide.title }}</h1>
+<h2>{{ slide.title }}</h2>
 <div class="wrapper">
 
 <ul>
   <li ng-repeat="point in slide.points">{{ point }}</li>
 </ul>
-<img src="{{ slide.img }}">
+<img id="{{slide.imgId}}" ng-src="{{ slide.image }}" ng-if='slide.image'>
 
 </div>

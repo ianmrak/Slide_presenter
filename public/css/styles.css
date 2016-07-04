@@ -7,31 +7,47 @@ body {
   margin: 0;
   font-family: 'Arial', Sans-serif;
 }
-h1 {
+h2 {
   font-size: 50px;
   text-align: center;
   background-color: #18212D;
   color: white;
   margin: 0 0 1em 0;
   padding: 30px;
+  min-width: 100%;
   border-bottom: 1px solid silver;
 }
-img {
+.wrapper img {
   border-radius: 10px;
   float: right;
-  max-width: 600px;
+  width: 600px;
+  border: 1px solid #18212D;
+
+}
+#centerImg {
+  float: none;
+  border-radius: 10px;
+  max-width: 400px;
+  border: 1px solid #18212D;
 }
 ul {
   display: flex;
   flex-direction: column;
   float: left;
-  height: 90%;
+  height: 60%;
   list-style-type: none;
   margin: 0px;
   padding: 0px;
 }
 li {
+  font-size: 20px;
   flex-grow: 1;
+  text-align: left;
+}
+.centerMessage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .animateMe {
   height: 100px;
@@ -60,9 +76,11 @@ li {
 .wrapper {
   height: 100%;
   overflow: hidden;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
+  text-align: center;
 }
+
 #uiView {
   height: 80%;
 }
