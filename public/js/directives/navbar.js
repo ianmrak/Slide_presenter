@@ -8,5 +8,5 @@ angular.module('myWebsite.navbar', [])
     retrict: 'E',
     templateUrl: 'views/navbar.html',
     controller: 'NavigationController'
-    }
+  }
 })

@@ -15,11 +15,5 @@ angular.module('myWebsite',
     templateUrl: 'views/template.html',
     controller: 'PresentationController'
   })
-  .state('end', {
-    url: '/end',
-    templateUrl: 'views/bookend.html',
-    controller: 'PresentationController'
-  })
-
 
 });

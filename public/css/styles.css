@@ -14,20 +14,18 @@ h2 {
   color: white;
   margin: 0 0 1em 0;
   padding: 30px;
-  min-width: 100%;
   border-bottom: 1px solid silver;
 }
 .wrapper img {
   border-radius: 10px;
   float: right;
-  width: 600px;
+  max-width: 600px;
   border: 1px solid #18212D;
 
 }
 #centerImg {
   float: none;
   border-radius: 10px;
-  max-width: 400px;
   border: 1px solid #18212D;
 }
 ul {
@@ -43,11 +41,6 @@ li {
   font-size: 20px;
   flex-grow: 1;
   text-align: left;
-}
-.centerMessage {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .animateMe {
   height: 100px;

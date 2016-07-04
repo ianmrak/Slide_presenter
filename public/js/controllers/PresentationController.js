@@ -1,11 +1,13 @@
 angular.module('myWebsite.presentation', [])
 
-.controller('PresentationController', function($scope, $stateParams, $state, Animate, Slides) {
+.controller('PresentationController', function($scope, $stateParams, $state, Slides) {
   $scope.id = parseInt($stateParams.id);
   $scope.index = 0;
-  $scope.slide = Slides.serveSlide($scope.id-1);
-  $scope.slide.image = $scope.slide.img[$scope.index];
-  document.onkeydown = function(e) {
+  Slides.getSlides($scope.id, function(data) {
+    $scope.slide = data;
+    $scope.slide.image = $scope.slide.img[$scope.index];
+  });
+  document.onkeyup = function(e) {
     if (e.keyCode == '39' || e.keyCode == '37') {
       if (e.keyCode == '39') {
         if ($scope.id < 6) {
